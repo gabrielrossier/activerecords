@@ -1,0 +1,6 @@
+development:
+  adapter:  mysql2
+  host:     localhost
+  username: test
+  password: 1234
+  database: poo1_2020_shop
