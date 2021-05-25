@@ -1,375 +1,261 @@
-# Logfile created on 2021-03-03 11:14:36 +0100 by logger.rb/61378
-D, [2021-03-03T11:14:37.015341 #11158] DEBUG -- :    (0.2ms)  SELECT 1
-D, [2021-03-03T11:16:39.214697 #11375] DEBUG -- :    (0.2ms)  SELECT 1
-D, [2021-03-03T11:16:52.377781 #11411] DEBUG -- :    (0.1ms)  SELECT 1
-D, [2021-03-03T11:16:52.389903 #11411] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T11:16:52.393166 #11411] DEBUG -- :   Client Create (0.5ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Gabriel', 'Rossier', '2021-03-03 10:16:52.386343', '2021-03-03 10:16:52.386343')
-D, [2021-03-03T11:16:52.397153 #11411] DEBUG -- :   TRANSACTION (1.0ms)  COMMIT
-D, [2021-03-03T11:17:08.906855 #11453] DEBUG -- :   Client Load (0.4ms)  SELECT `clients`.* FROM `clients`
-D, [2021-03-03T11:17:08.909907 #11453] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T11:17:08.911723 #11453] DEBUG -- :   Client Create (0.6ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Gabriel', 'Rossier', '2021-03-03 10:17:08.909203', '2021-03-03 10:17:08.909203')
-D, [2021-03-03T11:17:08.914128 #11453] DEBUG -- :   TRANSACTION (0.4ms)  COMMIT
-D, [2021-03-03T11:17:32.319425 #11511] DEBUG -- :   Client Load (0.4ms)  SELECT `clients`.* FROM `clients`
-D, [2021-03-03T11:17:32.322648 #11511] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T11:17:32.324244 #11511] DEBUG -- :   Client Create (0.3ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Gabriel', 'Rossier', '2021-03-03 10:17:32.321893', '2021-03-03 10:17:32.321893')
-D, [2021-03-03T11:17:32.326908 #11511] DEBUG -- :   TRANSACTION (1.1ms)  COMMIT
-D, [2021-03-03T11:17:39.346868 #11535] DEBUG -- :   Client Load (0.4ms)  SELECT `clients`.* FROM `clients`
-D, [2021-03-03T11:17:39.350111 #11535] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T11:17:39.353090 #11535] DEBUG -- :   Client Create (1.9ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Gabriel', 'Rossier', '2021-03-03 10:17:39.349400', '2021-03-03 10:17:39.349400')
-D, [2021-03-03T11:17:39.364971 #11535] DEBUG -- :   TRANSACTION (1.1ms)  COMMIT
-D, [2021-03-03T11:17:53.283119 #11571] DEBUG -- :   Client Load (0.5ms)  SELECT `clients`.* FROM `clients` ORDER BY `clients`.`id` ASC LIMIT 1
-D, [2021-03-03T11:17:53.290765 #11571] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T11:17:53.292063 #11571] DEBUG -- :   Client Create (0.4ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Gabriel', 'Rossier', '2021-03-03 10:17:53.289986', '2021-03-03 10:17:53.289986')
-D, [2021-03-03T11:17:53.293951 #11571] DEBUG -- :   TRANSACTION (0.9ms)  COMMIT
-D, [2021-03-03T11:19:27.702674 #11752] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T11:19:27.705246 #11752] DEBUG -- :   Client Create (0.8ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Gabriel', 'Rossier', '2021-03-03 10:19:27.701938', '2021-03-03 10:19:27.701938')
-D, [2021-03-03T11:19:27.708102 #11752] DEBUG -- :   Order Create (0.3ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 6, '2021-03-03 10:19:27.707283', '2021-03-03 10:19:27.707283')
-D, [2021-03-03T11:19:27.710110 #11752] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T11:21:28.970163 #11942] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T11:21:28.971620 #11942] DEBUG -- :   Client Create (0.4ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Gabriel', 'Rossier', '2021-03-03 10:21:28.969333', '2021-03-03 10:21:28.969333')
-D, [2021-03-03T11:21:28.976309 #11942] DEBUG -- :   Order Create (1.9ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 7, '2021-03-03 10:21:28.973939', '2021-03-03 10:21:28.973939')
-D, [2021-03-03T11:21:28.978037 #11942] DEBUG -- :   TRANSACTION (0.4ms)  COMMIT
-D, [2021-03-03T11:21:28.979838 #11942] DEBUG -- :   Client Load (0.4ms)  SELECT `clients`.* FROM `clients`
-D, [2021-03-03T11:21:28.983703 #11942] DEBUG -- :   Order Load (0.7ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 1
-D, [2021-03-03T11:21:28.985733 #11942] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 2
-D, [2021-03-03T11:21:28.987767 #11942] DEBUG -- :   Order Load (0.5ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 3
-D, [2021-03-03T11:21:28.990316 #11942] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 4
-D, [2021-03-03T11:21:28.994706 #11942] DEBUG -- :   Order Load (0.9ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 5
-D, [2021-03-03T11:21:28.997422 #11942] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 6
-D, [2021-03-03T11:21:28.999942 #11942] DEBUG -- :   Order Load (0.3ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 7
-D, [2021-03-03T11:23:24.631779 #12143] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T11:23:24.632794 #12143] DEBUG -- :   Client Create (0.2ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Gabriel', 'Rossier', '2021-03-03 10:23:24.631081', '2021-03-03 10:23:24.631081')
-D, [2021-03-03T11:23:24.634784 #12143] DEBUG -- :   Order Create (0.3ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 8, '2021-03-03 10:23:24.634140', '2021-03-03 10:23:24.634140')
-D, [2021-03-03T11:23:24.637137 #12143] DEBUG -- :   TRANSACTION (1.2ms)  COMMIT
-D, [2021-03-03T11:23:24.639675 #12143] DEBUG -- :   Client Load (0.3ms)  SELECT `clients`.* FROM `clients`
-D, [2021-03-03T11:23:24.643396 #12143] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 8
-D, [2021-03-03T11:25:06.213800 #12351] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T11:25:06.216696 #12351] DEBUG -- :   Client Create (0.8ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Andi', 'Rossier', '2021-03-03 10:25:06.213039', '2021-03-03 10:25:06.213039')
-D, [2021-03-03T11:25:06.220755 #12351] DEBUG -- :   Order Create (0.8ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 9, '2021-03-03 10:25:06.218671', '2021-03-03 10:25:06.218671')
-D, [2021-03-03T11:25:06.222547 #12351] DEBUG -- :   Order Create (0.2ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('hey', 9, '2021-03-03 10:25:06.221893', '2021-03-03 10:25:06.221893')
-D, [2021-03-03T11:25:06.224385 #12351] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
-D, [2021-03-03T11:25:06.226724 #12351] DEBUG -- :   Client Load (0.3ms)  SELECT `clients`.* FROM `clients`
-D, [2021-03-03T11:25:06.230216 #12351] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 8
-D, [2021-03-03T11:25:06.232849 #12351] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 9
-D, [2021-03-03T11:48:56.135243 #14740] DEBUG -- :   TRANSACTION (3.5ms)  BEGIN
-D, [2021-03-03T11:48:56.136846 #14740] DEBUG -- :   Client Create (0.4ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Andi', 'Rossier', '2021-03-03 10:48:56.131143', '2021-03-03 10:48:56.131143')
-D, [2021-03-03T11:48:56.143400 #14740] DEBUG -- :   Order Create (4.0ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 10, '2021-03-03 10:48:56.138887', '2021-03-03 10:48:56.138887')
-D, [2021-03-03T11:48:56.145206 #14740] DEBUG -- :   Order Create (0.3ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('hey', 10, '2021-03-03 10:48:56.144572', '2021-03-03 10:48:56.144572')
-D, [2021-03-03T11:48:56.146788 #14740] DEBUG -- :   TRANSACTION (0.6ms)  COMMIT
-D, [2021-03-03T11:48:56.176976 #14740] DEBUG -- :   TRANSACTION (0.9ms)  BEGIN
-D, [2021-03-03T11:48:56.178825 #14740] DEBUG -- :   Product Create (1.0ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('tv', 150.0, 'Grosse description', '2021-03-03 10:48:56.175589', '2021-03-03 10:48:56.175589')
-D, [2021-03-03T11:48:56.180563 #14740] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T11:53:13.324743 #15237] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T11:53:13.325986 #15237] DEBUG -- :   Client Create (0.3ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Andi', 'Rossier', '2021-03-03 10:53:13.323985', '2021-03-03 10:53:13.323985')
-D, [2021-03-03T11:53:13.328754 #15237] DEBUG -- :   Order Create (0.3ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 1, '2021-03-03 10:53:13.327961', '2021-03-03 10:53:13.327961')
-D, [2021-03-03T11:53:13.332043 #15237] DEBUG -- :   Order Create (0.7ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('hey', 1, '2021-03-03 10:53:13.329808', '2021-03-03 10:53:13.329808')
-D, [2021-03-03T11:53:13.333880 #15237] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T11:53:13.342093 #15237] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T11:53:13.343291 #15237] DEBUG -- :   Product Create (0.3ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('tv', 150, 'Grosse description', '2021-03-03 10:53:13.341456', '2021-03-03 10:53:13.341456')
-D, [2021-03-03T11:53:13.344924 #15237] DEBUG -- :   TRANSACTION (0.6ms)  COMMIT
-D, [2021-03-03T11:53:33.282765 #15283] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T11:53:33.284391 #15283] DEBUG -- :   Client Create (0.6ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Andi', 'Rossier', '2021-03-03 10:53:33.282035', '2021-03-03 10:53:33.282035')
-D, [2021-03-03T11:53:33.287461 #15283] DEBUG -- :   Order Create (0.3ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 2, '2021-03-03 10:53:33.286677', '2021-03-03 10:53:33.286677')
-D, [2021-03-03T11:53:33.290507 #15283] DEBUG -- :   Order Create (0.6ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('hey', 2, '2021-03-03 10:53:33.288713', '2021-03-03 10:53:33.288713')
-D, [2021-03-03T11:53:33.292177 #15283] DEBUG -- :   TRANSACTION (0.6ms)  COMMIT
-D, [2021-03-03T11:53:33.299936 #15283] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T11:53:33.301525 #15283] DEBUG -- :   Product Create (0.5ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('tv', 150, 'Grosse description', '2021-03-03 10:53:33.299301', '2021-03-03 10:53:33.299301')
-D, [2021-03-03T11:53:33.303804 #15283] DEBUG -- :   TRANSACTION (0.3ms)  COMMIT
-D, [2021-03-03T11:54:08.879986 #15367] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T11:54:08.880952 #15367] DEBUG -- :   Client Create (0.2ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Andi', 'Rossier', '2021-03-03 10:54:08.879392', '2021-03-03 10:54:08.879392')
-D, [2021-03-03T11:54:08.882936 #15367] DEBUG -- :   Order Create (0.3ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 3, '2021-03-03 10:54:08.882335', '2021-03-03 10:54:08.882335')
-D, [2021-03-03T11:54:08.884917 #15367] DEBUG -- :   Order Create (0.5ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('hey', 3, '2021-03-03 10:54:08.883925', '2021-03-03 10:54:08.883925')
-D, [2021-03-03T11:54:08.887235 #15367] DEBUG -- :   TRANSACTION (0.5ms)  COMMIT
-D, [2021-03-03T11:54:08.897974 #15367] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T11:54:08.898935 #15367] DEBUG -- :   Product Create (0.2ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('tv', 150, 'Grosse description', '2021-03-03 10:54:08.897396', '2021-03-03 10:54:08.897396')
-D, [2021-03-03T11:54:08.900383 #15367] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T11:54:28.065123 #15418] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T11:54:28.067224 #15418] DEBUG -- :   Client Create (1.2ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Andi', 'Rossier', '2021-03-03 10:54:28.064504', '2021-03-03 10:54:28.064504')
-D, [2021-03-03T11:54:28.070196 #15418] DEBUG -- :   Order Create (0.3ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 4, '2021-03-03 10:54:28.069387', '2021-03-03 10:54:28.069387')
-D, [2021-03-03T11:54:28.072958 #15418] DEBUG -- :   Order Create (1.1ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('hey', 4, '2021-03-03 10:54:28.071471', '2021-03-03 10:54:28.071471')
-D, [2021-03-03T11:54:28.074529 #15418] DEBUG -- :   TRANSACTION (0.5ms)  COMMIT
-D, [2021-03-03T11:54:28.084746 #15418] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T11:54:28.087446 #15418] DEBUG -- :   Product Create (1.8ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('tv', 150, 'Grosse description', '2021-03-03 10:54:28.084121', '2021-03-03 10:54:28.084121')
-D, [2021-03-03T11:54:28.089405 #15418] DEBUG -- :   TRANSACTION (0.6ms)  COMMIT
-D, [2021-03-03T11:54:28.098302 #15418] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T11:54:28.099640 #15418] DEBUG -- :   OrderItem Create (0.4ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `product_id`, `order_id`, `created_at`, `updated_at`) VALUES (10, 1500, 4, 8, '2021-03-03 10:54:28.097634', '2021-03-03 10:54:28.097634')
-D, [2021-03-03T11:54:28.101281 #15418] DEBUG -- :   TRANSACTION (0.6ms)  COMMIT
-D, [2021-03-03T11:54:28.103332 #15418] DEBUG -- :   Client Load (0.4ms)  SELECT `clients`.* FROM `clients`
-D, [2021-03-03T11:54:28.106652 #15418] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 1
-D, [2021-03-03T11:54:28.109631 #15418] DEBUG -- :   Order Load (0.9ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 2
-D, [2021-03-03T11:54:28.111883 #15418] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 3
-D, [2021-03-03T11:54:28.114207 #15418] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 4
-D, [2021-03-03T11:59:33.068239 #15930] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T11:59:33.069614 #15930] DEBUG -- :   Client Create (0.3ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Andi', 'Rossier', '2021-03-03 10:59:33.067415', '2021-03-03 10:59:33.067415')
-D, [2021-03-03T11:59:33.072216 #15930] DEBUG -- :   Order Create (0.3ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 5, '2021-03-03 10:59:33.071434', '2021-03-03 10:59:33.071434')
-D, [2021-03-03T11:59:33.074112 #15930] DEBUG -- :   Order Create (0.3ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('hey', 5, '2021-03-03 10:59:33.073447', '2021-03-03 10:59:33.073447')
-D, [2021-03-03T11:59:33.075867 #15930] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T11:59:33.086101 #15930] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T11:59:33.087328 #15930] DEBUG -- :   Product Create (0.3ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('tv', 150, 'Grosse description', '2021-03-03 10:59:33.085363', '2021-03-03 10:59:33.085363')
-D, [2021-03-03T11:59:33.089019 #15930] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T11:59:33.097900 #15930] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T11:59:33.100425 #15930] DEBUG -- :   OrderItem Create (1.7ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `product_id`, `order_id`, `created_at`, `updated_at`) VALUES (10, 1500, 5, 10, '2021-03-03 10:59:33.097231', '2021-03-03 10:59:33.097231')
-D, [2021-03-03T11:59:33.102237 #15930] DEBUG -- :   TRANSACTION (0.5ms)  COMMIT
-D, [2021-03-03T11:59:33.104359 #15930] DEBUG -- :   Client Load (0.3ms)  SELECT `clients`.* FROM `clients`
-D, [2021-03-03T11:59:33.107773 #15930] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 1
-D, [2021-03-03T11:59:33.110256 #15930] DEBUG -- :   OrderItem Load (0.3ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 1
-D, [2021-03-03T11:59:33.113108 #15930] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 2
-D, [2021-03-03T11:59:33.115094 #15930] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 2
-D, [2021-03-03T11:59:33.117212 #15930] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 3
-D, [2021-03-03T11:59:33.120427 #15930] DEBUG -- :   OrderItem Load (1.2ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4
-D, [2021-03-03T11:59:33.122416 #15930] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 3
-D, [2021-03-03T11:59:33.125143 #15930] DEBUG -- :   OrderItem Load (0.5ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 5
-D, [2021-03-03T11:59:33.127895 #15930] DEBUG -- :   OrderItem Load (0.6ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 6
-D, [2021-03-03T11:59:33.131014 #15930] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 4
-D, [2021-03-03T11:59:33.133366 #15930] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 7
-D, [2021-03-03T11:59:33.136962 #15930] DEBUG -- :   OrderItem Load (0.5ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 8
-D, [2021-03-03T11:59:33.140025 #15930] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1
-D, [2021-03-03T11:59:33.142754 #15930] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 5
-D, [2021-03-03T11:59:33.151321 #15930] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 9
-D, [2021-03-03T11:59:33.153616 #15930] DEBUG -- :   OrderItem Load (0.5ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 10
-D, [2021-03-03T11:59:33.156483 #15930] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 5 LIMIT 1
-D, [2021-03-03T12:01:14.536138 #16125] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T12:01:14.539650 #16125] DEBUG -- :   Client Create (0.4ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Andi', 'Rossier', '2021-03-03 11:01:14.535392', '2021-03-03 11:01:14.535392')
-D, [2021-03-03T12:01:14.542828 #16125] DEBUG -- :   Order Create (0.3ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 1, '2021-03-03 11:01:14.542117', '2021-03-03 11:01:14.542117')
-D, [2021-03-03T12:01:14.545049 #16125] DEBUG -- :   TRANSACTION (1.2ms)  COMMIT
-D, [2021-03-03T12:01:14.555911 #16125] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T12:01:14.557059 #16125] DEBUG -- :   Product Create (0.2ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('tv', 150, 'Grosse description', '2021-03-03 11:01:14.555213', '2021-03-03 11:01:14.555213')
-D, [2021-03-03T12:01:14.558647 #16125] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T12:01:14.566992 #16125] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T12:01:14.568192 #16125] DEBUG -- :   OrderItem Create (0.3ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `product_id`, `order_id`, `created_at`, `updated_at`) VALUES (10, 1500, 1, 1, '2021-03-03 11:01:14.566354', '2021-03-03 11:01:14.566354')
-D, [2021-03-03T12:01:14.570237 #16125] DEBUG -- :   TRANSACTION (1.1ms)  COMMIT
-D, [2021-03-03T12:01:14.572362 #16125] DEBUG -- :   Client Load (0.3ms)  SELECT `clients`.* FROM `clients`
-D, [2021-03-03T12:01:14.575824 #16125] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 1
-D, [2021-03-03T12:01:14.578269 #16125] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 1
-D, [2021-03-03T12:01:14.581113 #16125] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
-D, [2021-03-03T15:53:59.994202 #3484] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T15:53:59.996951 #3484] DEBUG -- :   Client Create (1.0ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Andi', 'Rossier', '2021-03-03 14:53:59.993191', '2021-03-03 14:53:59.993191')
-D, [2021-03-03T15:54:00.001504 #3484] DEBUG -- :   Order Create (1.2ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 2, '2021-03-03 14:53:59.999513', '2021-03-03 14:53:59.999513')
-D, [2021-03-03T15:54:00.004037 #3484] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T15:54:00.014982 #3484] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T15:54:00.017574 #3484] DEBUG -- :   Product Create (1.3ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('tv', 0, 'Grosse description', '2021-03-03 14:54:00.014258', '2021-03-03 14:54:00.014258')
-D, [2021-03-03T15:54:00.019513 #3484] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T15:54:00.028909 #3484] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T15:54:00.030827 #3484] DEBUG -- :   OrderItem Create (0.5ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `product_id`, `order_id`, `created_at`, `updated_at`) VALUES (10, 0, 2, 2, '2021-03-03 14:54:00.028295', '2021-03-03 14:54:00.028295')
-D, [2021-03-03T15:54:00.033040 #3484] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T15:54:00.035428 #3484] DEBUG -- :   Client Load (0.5ms)  SELECT `clients`.* FROM `clients`
-D, [2021-03-03T15:54:00.039797 #3484] DEBUG -- :   Order Load (0.7ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 1
-D, [2021-03-03T15:54:00.043214 #3484] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 1
-D, [2021-03-03T15:54:00.047883 #3484] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
-D, [2021-03-03T15:54:00.050620 #3484] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 2
-D, [2021-03-03T15:54:00.053141 #3484] DEBUG -- :   OrderItem Load (0.5ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 2
-D, [2021-03-03T15:54:00.055920 #3484] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1
-D, [2021-03-03T15:56:57.347234 #3796] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T15:56:57.353627 #3796] DEBUG -- :   Client Create (1.7ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Andi', 'Rossier', '2021-03-03 14:56:57.346357', '2021-03-03 14:56:57.346357')
-D, [2021-03-03T15:56:57.358437 #3796] DEBUG -- :   Order Create (1.9ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 3, '2021-03-03 14:56:57.355935', '2021-03-03 14:56:57.355935')
-D, [2021-03-03T15:56:57.360434 #3796] DEBUG -- :   TRANSACTION (0.6ms)  COMMIT
-D, [2021-03-03T15:56:57.370642 #3796] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T15:56:57.372480 #3796] DEBUG -- :   Product Create (0.6ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('tv', 0, 'Grosse description', '2021-03-03 14:56:57.370007', '2021-03-03 14:56:57.370007')
-D, [2021-03-03T15:56:57.374657 #3796] DEBUG -- :   TRANSACTION (0.4ms)  COMMIT
-D, [2021-03-03T15:56:57.383426 #3796] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T15:56:57.386168 #3796] DEBUG -- :   OrderItem Create (1.7ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `product_id`, `order_id`, `created_at`, `updated_at`) VALUES (10, 0, 3, 3, '2021-03-03 14:56:57.382786', '2021-03-03 14:56:57.382786')
-D, [2021-03-03T15:56:57.388979 #3796] DEBUG -- :   TRANSACTION (1.3ms)  COMMIT
-D, [2021-03-03T15:56:57.391528 #3796] DEBUG -- :   Client Load (0.4ms)  SELECT `clients`.* FROM `clients`
-D, [2021-03-03T15:56:57.394986 #3796] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 1
-D, [2021-03-03T15:56:57.397670 #3796] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 1
-D, [2021-03-03T15:56:57.401236 #3796] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
-D, [2021-03-03T15:56:57.403796 #3796] DEBUG -- :   Order Load (0.6ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 2
-D, [2021-03-03T15:56:57.407821 #3796] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 2
-D, [2021-03-03T15:56:57.410199 #3796] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1
-D, [2021-03-03T15:56:57.413125 #3796] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 3
-D, [2021-03-03T15:56:57.415932 #3796] DEBUG -- :   OrderItem Load (0.6ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 3
-D, [2021-03-03T15:56:57.419226 #3796] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1
-D, [2021-03-03T15:57:56.154113 #3912] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T15:57:56.155455 #3912] DEBUG -- :   Client Create (0.2ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Andi', 'Rossier', '2021-03-03 14:57:56.153371', '2021-03-03 14:57:56.153371')
-D, [2021-03-03T15:57:56.158238 #3912] DEBUG -- :   Order Create (0.3ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 4, '2021-03-03 14:57:56.157498', '2021-03-03 14:57:56.157498')
-D, [2021-03-03T15:57:56.160653 #3912] DEBUG -- :   TRANSACTION (1.1ms)  COMMIT
-D, [2021-03-03T15:57:56.173025 #3912] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T15:57:56.174472 #3912] DEBUG -- :   Product Create (0.3ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('tv', 0, 'Grosse description', '2021-03-03 14:57:56.172214', '2021-03-03 14:57:56.172214')
-D, [2021-03-03T15:57:56.176297 #3912] DEBUG -- :   TRANSACTION (0.6ms)  COMMIT
-D, [2021-03-03T15:57:56.183482 #3912] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T15:57:56.184658 #3912] DEBUG -- :   OrderItem Create (0.3ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `product_id`, `order_id`, `created_at`, `updated_at`) VALUES (10, 0, 4, 4, '2021-03-03 14:57:56.182881', '2021-03-03 14:57:56.182881')
-D, [2021-03-03T15:57:56.186324 #3912] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T15:58:05.604229 #3933] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T15:58:05.606685 #3933] DEBUG -- :   Client Create (0.7ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Andi', 'Rossier', '2021-03-03 14:58:05.603467', '2021-03-03 14:58:05.603467')
-D, [2021-03-03T15:58:05.612882 #3933] DEBUG -- :   Order Create (3.1ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 5, '2021-03-03 14:58:05.609317', '2021-03-03 14:58:05.609317')
-D, [2021-03-03T15:58:05.614814 #3933] DEBUG -- :   TRANSACTION (0.6ms)  COMMIT
-D, [2021-03-03T15:58:05.625341 #3933] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T15:58:05.627839 #3933] DEBUG -- :   Product Create (0.6ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('tv', 0, 'Grosse description', '2021-03-03 14:58:05.624632', '2021-03-03 14:58:05.624632')
-D, [2021-03-03T15:58:05.634368 #3933] DEBUG -- :   TRANSACTION (0.9ms)  COMMIT
-D, [2021-03-03T15:58:05.640829 #3933] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T15:58:05.643150 #3933] DEBUG -- :   OrderItem Create (0.6ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `product_id`, `order_id`, `created_at`, `updated_at`) VALUES (10, 0, 5, 5, '2021-03-03 14:58:05.640350', '2021-03-03 14:58:05.640350')
-D, [2021-03-03T15:58:05.645251 #3933] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T15:58:12.839406 #3960] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T15:58:12.840633 #3960] DEBUG -- :   Client Create (0.2ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Andi', 'Rossier', '2021-03-03 14:58:12.838645', '2021-03-03 14:58:12.838645')
-D, [2021-03-03T15:58:12.843184 #3960] DEBUG -- :   Order Create (0.3ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 6, '2021-03-03 14:58:12.842448', '2021-03-03 14:58:12.842448')
-D, [2021-03-03T15:58:12.845199 #3960] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T15:58:12.855368 #3960] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T15:58:12.856557 #3960] DEBUG -- :   Product Create (0.2ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('das', 5, 'Grosse description', '2021-03-03 14:58:12.854679', '2021-03-03 14:58:12.854679')
-D, [2021-03-03T15:58:12.859033 #3960] DEBUG -- :   TRANSACTION (1.2ms)  COMMIT
-D, [2021-03-03T15:58:12.869164 #3960] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T15:58:12.870563 #3960] DEBUG -- :   OrderItem Create (0.3ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `product_id`, `order_id`, `created_at`, `updated_at`) VALUES (10, 0, 6, 6, '2021-03-03 14:58:12.868476', '2021-03-03 14:58:12.868476')
-D, [2021-03-03T15:58:12.872440 #3960] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T15:58:21.319737 #3981] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T15:58:21.322147 #3981] DEBUG -- :   Client Create (0.6ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Andi', 'Rossier', '2021-03-03 14:58:21.318959', '2021-03-03 14:58:21.318959')
-D, [2021-03-03T15:58:21.326442 #3981] DEBUG -- :   Order Create (1.5ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 7, '2021-03-03 14:58:21.324410', '2021-03-03 14:58:21.324410')
-D, [2021-03-03T15:58:21.332228 #3981] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
-D, [2021-03-03T15:58:21.343232 #3981] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T15:58:21.345954 #3981] DEBUG -- :   Product Create (0.7ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('das', 5, 'Grosse description', '2021-03-03 14:58:21.342426', '2021-03-03 14:58:21.342426')
-D, [2021-03-03T15:58:21.347798 #3981] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T15:58:21.356476 #3981] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T15:58:21.358933 #3981] DEBUG -- :   OrderItem Create (1.5ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `product_id`, `order_id`, `created_at`, `updated_at`) VALUES (10, 0, 7, 7, '2021-03-03 14:58:21.355897', '2021-03-03 14:58:21.355897')
-D, [2021-03-03T15:58:21.360777 #3981] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T15:59:13.551563 #4075] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T15:59:13.553128 #4075] DEBUG -- :   Product Create (0.3ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('dasdacc', 125, 'Grosse description', '2021-03-03 14:59:13.547923', '2021-03-03 14:59:13.547923')
-D, [2021-03-03T15:59:13.555560 #4075] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T15:59:16.657764 #4087] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T15:59:16.660321 #4087] DEBUG -- :   Product Create (1.7ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('aaa', 0, 'Grosse description', '2021-03-03 14:59:16.654757', '2021-03-03 14:59:16.654757')
-D, [2021-03-03T15:59:16.663044 #4087] DEBUG -- :   TRANSACTION (0.5ms)  COMMIT
-D, [2021-03-03T15:59:22.390142 #4105] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T15:59:22.391474 #4105] DEBUG -- :   Product Create (0.3ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('dsadd', 0, 'Grosse description', '2021-03-03 14:59:22.386402', '2021-03-03 14:59:22.386402')
-D, [2021-03-03T15:59:22.394588 #4105] DEBUG -- :   TRANSACTION (1.1ms)  COMMIT
-D, [2021-03-03T16:02:06.545010 #4381] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T16:02:06.549345 #4381] DEBUG -- :   Client Create (0.3ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('John', 'Snow', '2021-03-03 15:02:06.541358', '2021-03-03 15:02:06.541358')
-D, [2021-03-03T16:02:06.552350 #4381] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T16:02:06.560386 #4381] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T16:02:06.561585 #4381] DEBUG -- :   Product Create (0.2ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('dsadd', 0, 'Grosse description', '2021-03-03 15:02:06.559567', '2021-03-03 15:02:06.559567')
-D, [2021-03-03T16:02:06.563203 #4381] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T16:05:36.918040 #4745] DEBUG -- :   Client Load (0.4ms)  SELECT `clients`.* FROM `clients` WHERE (firstname) /* loading for inspect */ LIMIT 11
-D, [2021-03-03T16:05:57.626489 #4793] DEBUG -- :   Client Load (0.3ms)  SELECT `clients`.* FROM `clients` WHERE (firstname) /* loading for inspect */ LIMIT 11
-D, [2021-03-03T16:06:56.429595 #4895] DEBUG -- :   Client Load (0.3ms)  SELECT `clients`.* FROM `clients` WHERE (firstname) /* loading for inspect */ LIMIT 11
-D, [2021-03-03T16:07:24.288295 #4968] DEBUG -- :   Client Load (0.3ms)  SELECT `clients`.* FROM `clients` WHERE (firstname) /* loading for inspect */ LIMIT 11
-D, [2021-03-03T16:08:20.190247 #5091] DEBUG -- :   Client Load (0.3ms)  SELECT `clients`.* FROM `clients` WHERE (firstname) /* loading for inspect */ LIMIT 11
-D, [2021-03-03T16:09:05.047538 #5226] DEBUG -- :   Client Load (0.3ms)  SELECT `clients`.* FROM `clients` WHERE (firstname) /* loading for inspect */ LIMIT 11
-D, [2021-03-03T16:09:19.830265 #5265] DEBUG -- :   Client Load (0.3ms)  SELECT `clients`.* FROM `clients` WHERE (firstname)
-D, [2021-03-03T16:09:51.980865 #5334] DEBUG -- :   Client Load (0.4ms)  SELECT `clients`.* FROM `clients` WHERE (firstname)
-D, [2021-03-03T16:11:15.768643 #5494] DEBUG -- :   Client Load (0.3ms)  SELECT `clients`.* FROM `clients` WHERE (firstname = 'John')
-D, [2021-03-03T16:11:54.921312 #5566] DEBUG -- :   Client Load (0.3ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John'
-D, [2021-03-03T16:12:25.988392 #5643] DEBUG -- :   Client Load (0.3ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' /* loading for inspect */ LIMIT 11
-D, [2021-03-03T16:12:36.079619 #5674] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' /* loading for inspect */ LIMIT 11
-D, [2021-03-03T16:13:10.552250 #5746] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' /* loading for inspect */ LIMIT 11
-D, [2021-03-03T16:14:30.979405 #5910] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' /* loading for inspect */ LIMIT 11
-D, [2021-03-03T16:16:04.821810 #6092] DEBUG -- :   Client Load (0.1ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' /* loading for inspect */ LIMIT 11
-D, [2021-03-03T16:16:22.873724 #6134] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T16:16:22.876342 #6134] DEBUG -- :   Client Create (0.8ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Andi', 'Rossier', '2021-03-03 15:16:22.872974', '2021-03-03 15:16:22.872974')
-D, [2021-03-03T16:16:22.878936 #6134] DEBUG -- :   Order Create (0.3ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 9, '2021-03-03 15:16:22.878207', '2021-03-03 15:16:22.878207')
-D, [2021-03-03T16:16:22.881107 #6134] DEBUG -- :   TRANSACTION (1.0ms)  COMMIT
-D, [2021-03-03T16:16:22.892279 #6134] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T16:16:22.894711 #6134] DEBUG -- :   Product Create (0.7ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('tv', 150, 'Grosse description', '2021-03-03 15:16:22.891565', '2021-03-03 15:16:22.891565')
-D, [2021-03-03T16:16:22.896454 #6134] DEBUG -- :   TRANSACTION (0.6ms)  COMMIT
-D, [2021-03-03T16:16:22.905740 #6134] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T16:16:22.906853 #6134] DEBUG -- :   OrderItem Create (0.3ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `product_id`, `order_id`, `created_at`, `updated_at`) VALUES (10, 1500, 12, 8, '2021-03-03 15:16:22.905090', '2021-03-03 15:16:22.905090')
-D, [2021-03-03T16:16:22.908859 #6134] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T16:16:22.917449 #6134] DEBUG -- :   Client Load (0.5ms)  SELECT `clients`.* FROM `clients`
-D, [2021-03-03T16:16:22.923451 #6134] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 1
-D, [2021-03-03T16:16:22.927096 #6134] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 1
-D, [2021-03-03T16:16:22.929489 #6134] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
-D, [2021-03-03T16:16:22.932438 #6134] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 2
-D, [2021-03-03T16:16:22.937031 #6134] DEBUG -- :   OrderItem Load (0.6ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 2
-D, [2021-03-03T16:16:22.939944 #6134] DEBUG -- :   Product Load (0.6ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1
-D, [2021-03-03T16:16:22.942248 #6134] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 3
-D, [2021-03-03T16:16:22.944908 #6134] DEBUG -- :   OrderItem Load (0.5ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 3
-D, [2021-03-03T16:16:22.947998 #6134] DEBUG -- :   Product Load (0.6ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1
-D, [2021-03-03T16:16:22.950898 #6134] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 4
-D, [2021-03-03T16:16:22.952964 #6134] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4
-D, [2021-03-03T16:16:22.955432 #6134] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1
-D, [2021-03-03T16:16:22.957461 #6134] DEBUG -- :   Order Load (0.3ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 5
-D, [2021-03-03T16:16:22.959451 #6134] DEBUG -- :   OrderItem Load (0.3ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 5
-D, [2021-03-03T16:16:22.962244 #6134] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 5 LIMIT 1
-D, [2021-03-03T16:16:22.965490 #6134] DEBUG -- :   Order Load (0.6ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 6
-D, [2021-03-03T16:16:22.969521 #6134] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 6
-D, [2021-03-03T16:16:22.971975 #6134] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 6 LIMIT 1
-D, [2021-03-03T16:16:22.974947 #6134] DEBUG -- :   Order Load (0.5ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 7
-D, [2021-03-03T16:16:22.985020 #6134] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 7
-D, [2021-03-03T16:16:22.987272 #6134] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 7 LIMIT 1
-D, [2021-03-03T16:16:22.990360 #6134] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 8
-D, [2021-03-03T16:16:22.992733 #6134] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 9
-D, [2021-03-03T16:16:22.995257 #6134] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 8
-D, [2021-03-03T16:16:22.997559 #6134] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 12 LIMIT 1
-D, [2021-03-03T16:16:58.902494 #6210] DEBUG -- :   Client Load (0.5ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' /* loading for inspect */ LIMIT 11
-D, [2021-03-03T16:19:04.241412 #6424] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T16:19:04.242758 #6424] DEBUG -- :   Client Create (0.2ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Andi', 'Rossier', '2021-03-03 15:19:04.240680', '2021-03-03 15:19:04.240680')
-D, [2021-03-03T16:19:04.246904 #6424] DEBUG -- :   Order Create (0.8ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('coucou', 10, '2021-03-03 15:19:04.244563', '2021-03-03 15:19:04.244563')
-D, [2021-03-03T16:19:04.248722 #6424] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T16:19:04.259273 #6424] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T16:19:04.260437 #6424] DEBUG -- :   Product Create (0.3ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('tv', 150, 'Grosse description', '2021-03-03 15:19:04.258317', '2021-03-03 15:19:04.258317')
-D, [2021-03-03T16:19:04.262181 #6424] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
-D, [2021-03-03T16:19:04.273066 #6424] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T16:19:04.275782 #6424] DEBUG -- :   OrderItem Create (1.7ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `product_id`, `order_id`, `created_at`, `updated_at`) VALUES (10, 1500, 13, 9, '2021-03-03 15:19:04.272436', '2021-03-03 15:19:04.272436')
-D, [2021-03-03T16:19:04.277336 #6424] DEBUG -- :   TRANSACTION (0.4ms)  COMMIT
-D, [2021-03-03T16:19:04.279198 #6424] DEBUG -- :   Client Load (0.3ms)  SELECT `clients`.* FROM `clients`
-D, [2021-03-03T16:19:04.282699 #6424] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 1
-D, [2021-03-03T16:19:04.285179 #6424] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 1
-D, [2021-03-03T16:19:04.287928 #6424] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
-D, [2021-03-03T16:19:04.289929 #6424] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 2
-D, [2021-03-03T16:19:04.294194 #6424] DEBUG -- :   OrderItem Load (0.5ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 2
-D, [2021-03-03T16:19:04.296349 #6424] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1
-D, [2021-03-03T16:19:04.298711 #6424] DEBUG -- :   Order Load (0.3ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 3
-D, [2021-03-03T16:19:04.301232 #6424] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 3
-D, [2021-03-03T16:19:04.304382 #6424] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1
-D, [2021-03-03T16:19:04.306683 #6424] DEBUG -- :   Order Load (0.3ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 4
-D, [2021-03-03T16:19:04.309878 #6424] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4
-D, [2021-03-03T16:19:04.311645 #6424] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1
-D, [2021-03-03T16:19:04.317149 #6424] DEBUG -- :   Order Load (0.5ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 5
-D, [2021-03-03T16:19:04.319293 #6424] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 5
-D, [2021-03-03T16:19:04.321688 #6424] DEBUG -- :   Product Load (0.3ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 5 LIMIT 1
-D, [2021-03-03T16:19:04.328932 #6424] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 6
-D, [2021-03-03T16:19:04.331544 #6424] DEBUG -- :   OrderItem Load (0.5ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 6
-D, [2021-03-03T16:19:04.334420 #6424] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 6 LIMIT 1
-D, [2021-03-03T16:19:04.336507 #6424] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 7
-D, [2021-03-03T16:19:04.339440 #6424] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 7
-D, [2021-03-03T16:19:04.341773 #6424] DEBUG -- :   Product Load (0.5ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 7 LIMIT 1
-D, [2021-03-03T16:19:04.350355 #6424] DEBUG -- :   Order Load (0.3ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 8
-D, [2021-03-03T16:19:04.354286 #6424] DEBUG -- :   Order Load (0.6ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 9
-D, [2021-03-03T16:19:04.358073 #6424] DEBUG -- :   OrderItem Load (0.5ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 8
-D, [2021-03-03T16:19:04.361684 #6424] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 12 LIMIT 1
-D, [2021-03-03T16:19:04.364233 #6424] DEBUG -- :   Order Load (0.5ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 10
-D, [2021-03-03T16:19:04.366700 #6424] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 9
-D, [2021-03-03T16:19:04.369152 #6424] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 13 LIMIT 1
-D, [2021-03-03T16:20:35.695426 #6604] DEBUG -- :   Client Load (0.5ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
-D, [2021-03-03T16:20:35.717752 #6604] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T16:20:35.718788 #6604] DEBUG -- :   Order Create (0.2ms)  INSERT INTO `orders` (`status`, `client_id`, `created_at`, `updated_at`) VALUES ('John s Command', 8, '2021-03-03 15:20:35.717014', '2021-03-03 15:20:35.717014')
-D, [2021-03-03T16:20:35.721215 #6604] DEBUG -- :   TRANSACTION (1.5ms)  COMMIT
-D, [2021-03-03T16:20:35.733072 #6604] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T16:20:35.734305 #6604] DEBUG -- :   Product Create (0.3ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('dsadd', 0, 'Grosse description', '2021-03-03 15:20:35.732358', '2021-03-03 15:20:35.732358')
-D, [2021-03-03T16:20:35.737276 #6604] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T16:20:35.745991 #6604] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T16:20:35.747839 #6604] DEBUG -- :   OrderItem Create (0.3ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `product_id`, `order_id`, `created_at`, `updated_at`) VALUES (10, 0, 14, 10, '2021-03-03 15:20:35.745370', '2021-03-03 15:20:35.745370')
-D, [2021-03-03T16:20:35.750878 #6604] DEBUG -- :   TRANSACTION (1.4ms)  COMMIT
-D, [2021-03-03T16:20:35.752642 #6604] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
-D, [2021-03-03T16:20:35.755145 #6604] DEBUG -- :   Product Create (0.8ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('dd', 0, 'Grosse description', '2021-03-03 15:20:35.752061', '2021-03-03 15:20:35.752061')
-D, [2021-03-03T16:20:35.757155 #6604] DEBUG -- :   TRANSACTION (0.9ms)  COMMIT
-D, [2021-03-03T16:20:35.759180 #6604] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T16:20:35.760231 #6604] DEBUG -- :   OrderItem Create (0.3ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `product_id`, `order_id`, `created_at`, `updated_at`) VALUES (10, 0, 15, 10, '2021-03-03 15:20:35.758535', '2021-03-03 15:20:35.758535')
-D, [2021-03-03T16:20:35.761811 #6604] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
-D, [2021-03-03T16:20:35.764151 #6604] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T16:20:35.765201 #6604] DEBUG -- :   Product Create (0.3ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('aa', 0, 'Grosse description', '2021-03-03 15:20:35.763435', '2021-03-03 15:20:35.763435')
-D, [2021-03-03T16:20:35.766728 #6604] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
-D, [2021-03-03T16:20:35.768829 #6604] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
-D, [2021-03-03T16:20:35.770258 #6604] DEBUG -- :   OrderItem Create (0.6ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `product_id`, `order_id`, `created_at`, `updated_at`) VALUES (10, 0, 16, 10, '2021-03-03 15:20:35.768230', '2021-03-03 15:20:35.768230')
-D, [2021-03-03T16:20:35.772806 #6604] DEBUG -- :   TRANSACTION (0.4ms)  COMMIT
-D, [2021-03-03T16:20:35.783219 #6604] DEBUG -- :   TRANSACTION (1.3ms)  BEGIN
-D, [2021-03-03T16:20:35.783527 #6604] DEBUG -- :   Product Create (0.2ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`) VALUES ('bb', 0, 'Grosse description', '2021-03-03 15:20:35.781552', '2021-03-03 15:20:35.781552')
-D, [2021-03-03T16:20:35.785313 #6604] DEBUG -- :   TRANSACTION (1.5ms)  COMMIT
-D, [2021-03-03T16:20:35.788599 #6604] DEBUG -- :   TRANSACTION (2.3ms)  BEGIN
-D, [2021-03-03T16:20:35.789698 #6604] DEBUG -- :   OrderItem Create (0.9ms)  INSERT INTO `order_items` (`quantity`, `item_price`, `product_id`, `order_id`, `created_at`, `updated_at`) VALUES (10, 0, 17, 10, '2021-03-03 15:20:35.785888', '2021-03-03 15:20:35.785888')
-D, [2021-03-03T16:20:35.791374 #6604] DEBUG -- :   TRANSACTION (1.4ms)  COMMIT
-D, [2021-03-03T16:24:13.498524 #6963] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
-D, [2021-03-03T16:24:13.508337 #6963] DEBUG -- :   Order Load (0.3ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 8 /* loading for inspect */ LIMIT 11
-D, [2021-03-03T16:24:25.250607 #7002] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
-D, [2021-03-03T16:24:25.263583 #7002] DEBUG -- :   Order Load (0.1ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 8 /* loading for inspect */ LIMIT 11
-D, [2021-03-03T16:24:51.754989 #7064] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
-D, [2021-03-03T16:24:51.768139 #7064] DEBUG -- :   Order Load (0.2ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 8 /* loading for inspect */ LIMIT 11
-D, [2021-03-03T16:25:04.710841 #7100] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
-D, [2021-03-03T16:25:04.724669 #7100] DEBUG -- :   Order Load (0.4ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 8 ORDER BY `orders`.`id` ASC LIMIT 1
-D, [2021-03-03T16:25:04.733544 #7100] DEBUG -- :   OrderItem Load (0.4ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 10 /* loading for inspect */ LIMIT 11
-D, [2021-03-03T16:25:11.994891 #7118] DEBUG -- :   Client Load (16.8ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
-D, [2021-03-03T16:25:12.021346 #7118] DEBUG -- :   Order Load (0.2ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 8 ORDER BY `orders`.`id` ASC LIMIT 1
-D, [2021-03-03T16:25:12.035834 #7118] DEBUG -- :   OrderItem Load (0.5ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 10 ORDER BY `order_items`.`id` ASC LIMIT 1
-D, [2021-03-03T16:25:12.049319 #7118] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 14 LIMIT 1
-D, [2021-03-03T16:25:28.454838 #7157] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
-D, [2021-03-03T16:25:46.538780 #7218] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
-D, [2021-03-03T16:25:46.545850 #7218] DEBUG -- :   Product Load (0.4ms)  SELECT `products`.* FROM `products` WHERE (price < 0.2)
-D, [2021-03-03T16:26:12.231255 #7272] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
-D, [2021-03-03T16:26:12.244721 #7272] DEBUG -- :   Order Load (0.1ms)  SELECT `orders`.* FROM `orders` WHERE `orders`.`client_id` = 8 ORDER BY `orders`.`id` ASC LIMIT 1
-D, [2021-03-03T16:26:12.255647 #7272] DEBUG -- :   OrderItem Load (0.2ms)  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 10 ORDER BY `order_items`.`id` ASC LIMIT 1
-D, [2021-03-03T16:26:12.263859 #7272] DEBUG -- :   Product Load (0.2ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 14 LIMIT 1
+D, [2021-03-10T10:54:29.797520 #7959] DEBUG -- :   Client Load (0.5ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T10:54:29.813609 #7959] DEBUG -- :   Client Load (2.4ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T10:54:29.831003 #7959] DEBUG -- :   Product Load (0.1ms)  SELECT `products`.* FROM `products` INNER JOIN `order_items` ON `products`.`id` = `order_items`.`product_id` INNER JOIN `orders` ON `order_items`.`order_id` = `orders`.`id` WHERE `orders`.`client_id` = 8 AND (price < 0.2)
+D, [2021-03-10T15:55:59.409943 #35975] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:55:59.415859 #35975] DEBUG -- :   Client Load (0.3ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:55:59.432784 #35975] DEBUG -- :   Product Load (0.2ms)  SELECT `products`.* FROM `products` INNER JOIN `order_items` ON `products`.`id` = `order_items`.`product_id` INNER JOIN `orders` ON `order_items`.`order_id` = `orders`.`id` WHERE `orders`.`client_id` = 8 AND (price < 0.2)
+D, [2021-03-10T15:55:59.437853 #35975] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:55:59.441784 #35975] DEBUG -- :   OrderItem Load (0.2ms)  SELECT `order_items`.* FROM `order_items` INNER JOIN `orders` ON `order_items`.`order_id` = `orders`.`id` WHERE `orders`.`client_id` = 8 AND (quantity > 100)
+D, [2021-03-10T15:55:59.451673 #35975] DEBUG -- :   Product Load (0.2ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 18 LIMIT 1
+D, [2021-03-10T15:57:15.565397 #36145] DEBUG -- :   Client Load (0.1ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:57:15.567471 #36145] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:57:15.592458 #36145] DEBUG -- :   Product Load (0.1ms)  SELECT `products`.* FROM `products` INNER JOIN `order_items` ON `products`.`id` = `order_items`.`product_id` INNER JOIN `orders` ON `order_items`.`order_id` = `orders`.`id` WHERE `orders`.`client_id` = 8 AND (price < 0.2)
+D, [2021-03-10T15:57:15.596758 #36145] DEBUG -- :   Client Load (0.1ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:57:15.599936 #36145] DEBUG -- :   OrderItem Load (0.1ms)  SELECT `order_items`.* FROM `order_items` INNER JOIN `orders` ON `order_items`.`order_id` = `orders`.`id` WHERE `orders`.`client_id` = 8 AND (quantity > 100)
+D, [2021-03-10T15:57:15.606564 #36145] DEBUG -- :   Product Load (0.2ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 18 LIMIT 1
+D, [2021-03-10T15:57:23.390668 #36166] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:57:23.395644 #36166] DEBUG -- :   Client Load (0.7ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:57:23.422743 #36166] DEBUG -- :   Product Load (0.1ms)  SELECT `products`.* FROM `products` INNER JOIN `order_items` ON `products`.`id` = `order_items`.`product_id` INNER JOIN `orders` ON `order_items`.`order_id` = `orders`.`id` WHERE `orders`.`client_id` = 8 AND (price < 0.2)
+D, [2021-03-10T15:57:23.428013 #36166] DEBUG -- :   Client Load (0.1ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:57:23.431229 #36166] DEBUG -- :   OrderItem Load (0.1ms)  SELECT `order_items`.* FROM `order_items` INNER JOIN `orders` ON `order_items`.`order_id` = `orders`.`id` WHERE `orders`.`client_id` = 8 AND (quantity > 100)
+D, [2021-03-10T15:57:23.439361 #36166] DEBUG -- :   Product Load (0.2ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 18 LIMIT 1
+D, [2021-03-10T15:57:33.073897 #36190] DEBUG -- :   Client Load (0.1ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:57:33.076554 #36190] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:57:33.096591 #36190] DEBUG -- :   Product Load (0.2ms)  SELECT `products`.* FROM `products` INNER JOIN `order_items` ON `products`.`id` = `order_items`.`product_id` INNER JOIN `orders` ON `order_items`.`order_id` = `orders`.`id` WHERE `orders`.`client_id` = 8 AND (price < 0.2)
+D, [2021-03-10T15:57:33.102148 #36190] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:57:33.106634 #36190] DEBUG -- :   OrderItem Load (0.2ms)  SELECT `order_items`.* FROM `order_items` INNER JOIN `orders` ON `order_items`.`order_id` = `orders`.`id` WHERE `orders`.`client_id` = 8 AND (quantity > 100)
+D, [2021-03-10T15:57:33.115724 #36190] DEBUG -- :   Product Load (0.2ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 18 LIMIT 1
+D, [2021-03-10T15:57:55.452965 #36255] DEBUG -- :   Client Load (0.4ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:57:55.462907 #36255] DEBUG -- :   Client Load (2.5ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:57:55.492175 #36255] DEBUG -- :   Product Load (0.2ms)  SELECT `products`.* FROM `products` INNER JOIN `order_items` ON `products`.`id` = `order_items`.`product_id` INNER JOIN `orders` ON `order_items`.`order_id` = `orders`.`id` WHERE `orders`.`client_id` = 8 AND (price < 0.2)
+D, [2021-03-10T15:57:55.499594 #36255] DEBUG -- :   Client Load (0.3ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:57:55.511457 #36255] DEBUG -- :   OrderItem Load (0.2ms)  SELECT `order_items`.* FROM `order_items` INNER JOIN `orders` ON `order_items`.`order_id` = `orders`.`id` WHERE `orders`.`client_id` = 8 AND (quantity > 100)
+D, [2021-03-10T15:57:55.531268 #36255] DEBUG -- :   Product Load (0.2ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 18 LIMIT 1
+D, [2021-03-10T15:58:48.202948 #36369] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:58:48.205695 #36369] DEBUG -- :   Client Load (0.1ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:58:48.223939 #36369] DEBUG -- :   Product Load (0.1ms)  SELECT `products`.* FROM `products` INNER JOIN `order_items` ON `products`.`id` = `order_items`.`product_id` INNER JOIN `orders` ON `order_items`.`order_id` = `orders`.`id` WHERE `orders`.`client_id` = 8 AND (price < 0.2)
+D, [2021-03-10T15:58:48.228102 #36369] DEBUG -- :   Client Load (0.1ms)  SELECT `clients`.* FROM `clients` WHERE `clients`.`firstname` = 'John' LIMIT 1
+D, [2021-03-10T15:58:48.231130 #36369] DEBUG -- :   OrderItem Load (0.1ms)  SELECT `order_items`.* FROM `order_items` INNER JOIN `orders` ON `order_items`.`order_id` = `orders`.`id` WHERE `orders`.`client_id` = 8 AND (quantity > 100)
+D, [2021-03-10T15:58:48.240017 #36369] DEBUG -- :   Product Load (0.2ms)  SELECT `products`.* FROM `products` WHERE `products`.`id` = 18 LIMIT 1
+D, [2021-03-24T10:28:17.619543 #71817] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2021-03-24T10:28:17.624179 #71817] DEBUG -- :   Individual Create (1.0ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`, `type`) VALUES ('Gabriel', 'Rossier', '2021-03-24 09:28:17.606491', '2021-03-24 09:28:17.606491', 'Individual')
+D, [2021-03-24T10:28:17.633157 #71817] DEBUG -- :   TRANSACTION (3.3ms)  COMMIT
+D, [2021-03-24T10:28:32.449694 #71854] DEBUG -- :   TRANSACTION (0.5ms)  BEGIN
+D, [2021-03-24T10:28:32.455398 #71854] DEBUG -- :   Individual Create (3.2ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`, `type`) VALUES ('Gabriel', 'Rossier', '2021-03-24 09:28:32.424771', '2021-03-24 09:28:32.424771', 'Individual')
+D, [2021-03-24T10:28:32.469557 #71854] DEBUG -- :   TRANSACTION (2.7ms)  COMMIT
+D, [2021-03-24T10:28:32.475034 #71854] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2021-03-24T10:28:32.479094 #71854] DEBUG -- :   Company Create (1.2ms)  INSERT INTO `clients` (`created_at`, `updated_at`, `type`, `name`) VALUES ('2021-03-24 09:28:32.473136', '2021-03-24 09:28:32.473136', 'Company', 'CPNV')
+D, [2021-03-24T10:28:32.484779 #71854] DEBUG -- :   TRANSACTION (2.4ms)  COMMIT
+D, [2021-03-24T10:45:29.951218 #73928] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T10:45:29.955073 #73928] DEBUG -- :   Individual Create (1.9ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`, `type`) VALUES ('Gabriel', 'Rossier', '2021-03-24 09:45:29.944278', '2021-03-24 09:45:29.944278', 'Individual')
+D, [2021-03-24T10:45:29.958085 #73928] DEBUG -- :   TRANSACTION (0.5ms)  COMMIT
+D, [2021-03-24T10:45:29.960161 #73928] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T10:45:29.961827 #73928] DEBUG -- :   Company Create (0.3ms)  INSERT INTO `clients` (`created_at`, `updated_at`, `type`, `name`) VALUES ('2021-03-24 09:45:29.959335', '2021-03-24 09:45:29.959335', 'Company', 'CPNV')
+D, [2021-03-24T10:45:29.964011 #73928] DEBUG -- :   TRANSACTION (1.1ms)  COMMIT
+D, [2021-03-24T10:46:57.911226 #74127] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
+D, [2021-03-24T10:46:57.914133 #74127] DEBUG -- :   Individual Create (1.0ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`, `type`) VALUES ('Gabriel', 'Rossier', '2021-03-24 09:46:57.904328', '2021-03-24 09:46:57.904328', 'Individual')
+D, [2021-03-24T10:46:57.917125 #74127] DEBUG -- :   TRANSACTION (0.9ms)  COMMIT
+D, [2021-03-24T10:46:57.919350 #74127] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
+D, [2021-03-24T10:46:57.920787 #74127] DEBUG -- :   Company Create (0.4ms)  INSERT INTO `clients` (`created_at`, `updated_at`, `type`, `name`) VALUES ('2021-03-24 09:46:57.918689', '2021-03-24 09:46:57.918689', 'Company', 'CPNV')
+D, [2021-03-24T10:46:57.922773 #74127] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
+D, [2021-03-24T10:48:54.173790 #74387] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T10:48:54.176195 #74387] DEBUG -- :   Individual Create (1.3ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`, `type`) VALUES ('Gabriel', 'Rossier', '2021-03-24 09:48:54.166605', '2021-03-24 09:48:54.166605', 'Individual')
+D, [2021-03-24T10:48:54.179046 #74387] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
+D, [2021-03-24T10:48:54.181330 #74387] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T10:48:54.182847 #74387] DEBUG -- :   Company Create (0.5ms)  INSERT INTO `clients` (`created_at`, `updated_at`, `type`, `name`) VALUES ('2021-03-24 09:48:54.180695', '2021-03-24 09:48:54.180695', 'Company', 'CPNV')
+D, [2021-03-24T10:48:54.184650 #74387] DEBUG -- :   TRANSACTION (0.6ms)  COMMIT
+D, [2021-03-24T10:49:25.021328 #74462] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T10:49:25.022798 #74462] DEBUG -- :   Individual Create (0.4ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`, `type`) VALUES ('Gabriel', 'Rossier', '2021-03-24 09:49:25.014791', '2021-03-24 09:49:25.014791', 'Individual')
+D, [2021-03-24T10:49:25.025543 #74462] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
+D, [2021-03-24T10:49:25.027612 #74462] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T10:49:25.030252 #74462] DEBUG -- :   Company Create (1.2ms)  INSERT INTO `clients` (`created_at`, `updated_at`, `type`, `name`) VALUES ('2021-03-24 09:49:25.026837', '2021-03-24 09:49:25.026837', 'Company', 'CPNV')
+D, [2021-03-24T10:49:25.032013 #74462] DEBUG -- :   TRANSACTION (0.5ms)  COMMIT
+D, [2021-03-24T10:49:25.037945 #74462] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T10:49:25.039386 #74462] DEBUG -- :   Provider Create (0.4ms)  INSERT INTO `providers` (`name`) VALUES ('STEG')
+D, [2021-03-24T10:49:25.041146 #74462] DEBUG -- :   TRANSACTION (0.6ms)  COMMIT
+D, [2021-03-24T10:50:10.957703 #74552] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T10:50:10.960629 #74552] DEBUG -- :   Individual Create (1.5ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`, `type`) VALUES ('Gabriel', 'Rossier', '2021-03-24 09:50:10.949879', '2021-03-24 09:50:10.949879', 'Individual')
+D, [2021-03-24T10:50:10.963890 #74552] DEBUG -- :   TRANSACTION (1.0ms)  COMMIT
+D, [2021-03-24T10:50:10.966057 #74552] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2021-03-24T10:50:10.967848 #74552] DEBUG -- :   Company Create (0.5ms)  INSERT INTO `clients` (`created_at`, `updated_at`, `type`, `name`) VALUES ('2021-03-24 09:50:10.965229', '2021-03-24 09:50:10.965229', 'Company', 'CPNV')
+D, [2021-03-24T10:50:10.970605 #74552] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
+D, [2021-03-24T10:50:10.976674 #74552] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T10:50:10.979628 #74552] DEBUG -- :   Provider Create (1.4ms)  INSERT INTO `providers` (`name`) VALUES ('STEG')
+D, [2021-03-24T10:50:10.981520 #74552] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
+D, [2021-03-24T10:52:47.951080 #74840] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2021-03-24T10:52:47.954122 #74840] DEBUG -- :   Individual Create (2.0ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`, `type`) VALUES ('Gabriel', 'Rossier', '2021-03-24 09:52:47.944007', '2021-03-24 09:52:47.944007', 'Individual')
+D, [2021-03-24T10:52:47.956822 #74840] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
+D, [2021-03-24T10:52:47.958894 #74840] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T10:52:47.960178 #74840] DEBUG -- :   Company Create (0.4ms)  INSERT INTO `clients` (`created_at`, `updated_at`, `type`, `name`) VALUES ('2021-03-24 09:52:47.958159', '2021-03-24 09:52:47.958159', 'Company', 'CPNV')
+D, [2021-03-24T10:52:47.961986 #74840] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
+D, [2021-03-24T10:52:47.968511 #74840] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2021-03-24T10:52:47.970291 #74840] DEBUG -- :   Provider Create (0.4ms)  INSERT INTO `providers` (`name`) VALUES ('STEG')
+D, [2021-03-24T10:52:47.972415 #74840] DEBUG -- :   TRANSACTION (0.9ms)  COMMIT
+D, [2021-03-24T10:53:38.643455 #74960] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T10:53:38.644996 #74960] DEBUG -- :   Individual Create (0.4ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`, `type`) VALUES ('Gabriel', 'Rossier', '2021-03-24 09:53:38.631318', '2021-03-24 09:53:38.631318', 'Individual')
+D, [2021-03-24T10:53:38.648811 #74960] DEBUG -- :   TRANSACTION (1.3ms)  COMMIT
+D, [2021-03-24T10:53:38.651282 #74960] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T10:53:38.653974 #74960] DEBUG -- :   Company Create (1.7ms)  INSERT INTO `clients` (`created_at`, `updated_at`, `type`, `name`) VALUES ('2021-03-24 09:53:38.650555', '2021-03-24 09:53:38.650555', 'Company', 'CPNV')
+D, [2021-03-24T10:53:38.655905 #74960] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
+D, [2021-03-24T10:55:11.279268 #75160] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T10:55:11.280853 #75160] DEBUG -- :   Individual Create (0.3ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`, `type`) VALUES ('Gabriel', 'Rossier', '2021-03-24 09:55:11.271289', '2021-03-24 09:55:11.271289', 'Individual')
+D, [2021-03-24T10:55:11.284546 #75160] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
+D, [2021-03-24T10:55:11.286576 #75160] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T10:55:11.287799 #75160] DEBUG -- :   Company Create (0.4ms)  INSERT INTO `clients` (`created_at`, `updated_at`, `type`, `name`) VALUES ('2021-03-24 09:55:11.285892', '2021-03-24 09:55:11.285892', 'Company', 'CPNV')
+D, [2021-03-24T10:55:11.289797 #75160] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
+D, [2021-03-24T10:57:10.492536 #75420] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T10:57:10.494059 #75420] DEBUG -- :   Individual Create (0.4ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`, `type`) VALUES ('Gabriel', 'Rossier', '2021-03-24 09:57:10.485977', '2021-03-24 09:57:10.485977', 'Individual')
+D, [2021-03-24T10:57:10.496539 #75420] DEBUG -- :   TRANSACTION (0.6ms)  COMMIT
+D, [2021-03-24T10:57:10.499265 #75420] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T10:57:10.512381 #75420] DEBUG -- :   Company Create (2.0ms)  INSERT INTO `clients` (`created_at`, `updated_at`, `type`, `name`) VALUES ('2021-03-24 09:57:10.498275', '2021-03-24 09:57:10.498275', 'Company', 'CPNV')
+D, [2021-03-24T10:57:10.513524 #75420] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
+D, [2021-03-24T10:57:10.553413 #75420] DEBUG -- :   TRANSACTION (1.0ms)  BEGIN
+D, [2021-03-24T10:57:10.554660 #75420] DEBUG -- :   Provider Create (0.3ms)  INSERT INTO `providers` (`name`) VALUES ('STEG')
+D, [2021-03-24T10:57:10.556491 #75420] DEBUG -- :   Product Create (0.3ms)  INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `updated_at`, `provider_id`) VALUES ('TV', 56, 'coucou', '2021-03-24 09:57:10.555576', '2021-03-24 09:57:10.555576', 1)
+D, [2021-03-24T10:57:10.558363 #75420] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
+D, [2021-03-24T11:01:03.806680 #75880] DEBUG -- :   Provider Load (0.5ms)  SELECT `providers`.* FROM `providers` WHERE `providers`.`id` = NULL LIMIT 1
+D, [2021-03-24T11:02:36.955683 #76053] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:02:36.957361 #76053] DEBUG -- :   Individual Create (0.4ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`, `type`) VALUES ('Gabriel', 'Rossier', '2021-03-24 10:02:36.948640', '2021-03-24 10:02:36.948640', 'Individual')
+D, [2021-03-24T11:02:36.960320 #76053] DEBUG -- :   TRANSACTION (0.9ms)  COMMIT
+D, [2021-03-24T11:02:36.962455 #76053] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:02:36.965320 #76053] DEBUG -- :   Company Create (1.8ms)  INSERT INTO `clients` (`created_at`, `updated_at`, `type`, `name`) VALUES ('2021-03-24 10:02:36.961583', '2021-03-24 10:02:36.961583', 'Company', 'CPNV')
+D, [2021-03-24T11:02:36.967693 #76053] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
+D, [2021-03-24T11:02:36.988713 #76053] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:02:36.990141 #76053] DEBUG -- :   Category Create (0.3ms)  INSERT INTO `categories` (`name`, `description`, `created_at`, `updated_at`) VALUES ('télé', 'écran', '2021-03-24 10:02:36.987929', '2021-03-24 10:02:36.987929')
+D, [2021-03-24T11:02:36.993622 #76053] DEBUG -- :   Provider Create (1.8ms)  INSERT INTO `providers` (`name`) VALUES ('STEG')
+D, [2021-03-24T11:02:36.998155 #76053] DEBUG -- :   Product Create (2.7ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`, `created_at`, `updated_at`, `provider_id`) VALUES ('TV', 56, 'coucou', 1, '2021-03-24 10:02:36.994701', '2021-03-24 10:02:36.994701', 2)
+D, [2021-03-24T11:02:37.000493 #76053] DEBUG -- :   TRANSACTION (0.9ms)  COMMIT
+D, [2021-03-24T11:02:54.544920 #76091] DEBUG -- :   Provider Load (0.3ms)  SELECT `providers`.* FROM `providers` WHERE `providers`.`id` = NULL LIMIT 1
+D, [2021-03-24T11:04:07.648456 #76239] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:04:07.649857 #76239] DEBUG -- :   Individual Create (0.3ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`, `type`) VALUES ('Gabriel', 'Rossier', '2021-03-24 10:04:07.639990', '2021-03-24 10:04:07.639990', 'Individual')
+D, [2021-03-24T11:04:07.653316 #76239] DEBUG -- :   TRANSACTION (0.9ms)  COMMIT
+D, [2021-03-24T11:04:07.655306 #76239] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
+D, [2021-03-24T11:04:07.656730 #76239] DEBUG -- :   Company Create (0.3ms)  INSERT INTO `clients` (`created_at`, `updated_at`, `type`, `name`) VALUES ('2021-03-24 10:04:07.654673', '2021-03-24 10:04:07.654673', 'Company', 'CPNV')
+D, [2021-03-24T11:04:07.658632 #76239] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
+D, [2021-03-24T11:04:07.679970 #76239] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:04:07.681236 #76239] DEBUG -- :   Category Create (0.3ms)  INSERT INTO `categories` (`name`, `description`, `created_at`, `updated_at`) VALUES ('télé', 'écran', '2021-03-24 10:04:07.679173', '2021-03-24 10:04:07.679173')
+D, [2021-03-24T11:04:07.683130 #76239] DEBUG -- :   Provider Create (0.4ms)  INSERT INTO `providers` (`name`) VALUES ('STEG')
+D, [2021-03-24T11:04:07.685185 #76239] DEBUG -- :   Product Create (0.3ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`, `created_at`, `updated_at`, `provider_id`) VALUES ('TV', 56, 'coucou', 1, '2021-03-24 10:04:07.684210', '2021-03-24 10:04:07.684210', 1)
+D, [2021-03-24T11:04:07.694515 #76239] DEBUG -- :   TRANSACTION (3.2ms)  COMMIT
+D, [2021-03-24T11:04:07.696735 #76239] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2021-03-24T11:04:07.700784 #76239] DEBUG -- :   Product Create (3.0ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`, `created_at`, `updated_at`, `provider_id`) VALUES ('TV', 56, 'coucou', 1, '2021-03-24 10:04:07.695949', '2021-03-24 10:04:07.695949', 1)
+D, [2021-03-24T11:04:07.707020 #76239] DEBUG -- :   TRANSACTION (1.1ms)  COMMIT
+D, [2021-03-24T11:04:07.710199 #76239] DEBUG -- :   TRANSACTION (2.0ms)  BEGIN
+D, [2021-03-24T11:04:07.711208 #76239] DEBUG -- :   Product Create (0.9ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`, `created_at`, `updated_at`, `provider_id`) VALUES ('TV', 56, 'coucou', 1, '2021-03-24 10:04:07.707642', '2021-03-24 10:04:07.707642', 1)
+D, [2021-03-24T11:04:07.713703 #76239] DEBUG -- :   TRANSACTION (2.1ms)  COMMIT
+D, [2021-03-24T11:04:07.715593 #76239] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:04:07.716861 #76239] DEBUG -- :   Product Create (1.1ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`, `created_at`, `updated_at`, `provider_id`) VALUES ('TV', 56, 'coucou', 1, '2021-03-24 10:04:07.714170', '2021-03-24 10:04:07.714170', 1)
+D, [2021-03-24T11:04:07.718737 #76239] DEBUG -- :   TRANSACTION (1.5ms)  COMMIT
+D, [2021-03-24T11:04:07.720848 #76239] DEBUG -- :   TRANSACTION (1.1ms)  BEGIN
+D, [2021-03-24T11:04:07.722087 #76239] DEBUG -- :   Product Create (1.1ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`, `created_at`, `updated_at`, `provider_id`) VALUES ('TV', 56, 'coucou', 1, '2021-03-24 10:04:07.719204', '2021-03-24 10:04:07.719204', 1)
+D, [2021-03-24T11:04:07.723975 #76239] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
+D, [2021-03-24T11:04:07.726116 #76239] DEBUG -- :   TRANSACTION (1.1ms)  BEGIN
+D, [2021-03-24T11:04:07.727936 #76239] DEBUG -- :   Product Create (1.7ms)  INSERT INTO `products` (`name`, `price`, `description`, `category_id`, `created_at`, `updated_at`, `provider_id`) VALUES ('TV', 56, 'coucou', 1, '2021-03-24 10:04:07.724513', '2021-03-24 10:04:07.724513', 1)
+D, [2021-03-24T11:04:07.729799 #76239] DEBUG -- :   TRANSACTION (1.5ms)  COMMIT
+D, [2021-03-24T11:04:24.134239 #76282] DEBUG -- :   Provider Load (0.4ms)  SELECT `providers`.* FROM `providers` ORDER BY `providers`.`id` ASC LIMIT 1
+D, [2021-03-24T11:04:56.489376 #76365] DEBUG -- :   Provider Load (0.1ms)  SELECT `providers`.* FROM `providers` ORDER BY `providers`.`id` ASC LIMIT 1
+D, [2021-03-24T11:04:56.521297 #76365] DEBUG -- :   Category Load (0.5ms)  SELECT `categories`.* FROM `categories` INNER JOIN `products` ON `categories`.`id` = `products`.`category_id` WHERE `products`.`provider_id` = 1
+D, [2021-03-24T11:20:23.195343 #78154] DEBUG -- :   Client Load (0.9ms)  SELECT `clients`.* FROM `clients` ORDER BY `clients`.`id` ASC LIMIT 1
+D, [2021-03-24T11:20:43.752613 #78206] DEBUG -- :   Client Load (0.1ms)  SELECT `clients`.* FROM `clients` ORDER BY `clients`.`id` ASC LIMIT 1
+D, [2021-03-24T11:21:20.767598 #78289] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` ORDER BY `clients`.`id` ASC LIMIT 1
+D, [2021-03-24T11:21:20.792524 #78289] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:21:20.793953 #78289] DEBUG -- :   Comment Create (0.4ms)  INSERT INTO `comments` (`content`, `client_id`) VALUES ('Bebou', 1)
+D, [2021-03-24T11:21:20.795727 #78289] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
+D, [2021-03-24T11:21:32.536098 #78324] DEBUG -- :   Client Load (0.1ms)  SELECT `clients`.* FROM `clients` ORDER BY `clients`.`id` ASC LIMIT 1
+D, [2021-03-24T11:21:32.558152 #78324] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:21:32.560475 #78324] DEBUG -- :   Comment Create (0.9ms)  INSERT INTO `comments` (`content`, `client_id`) VALUES ('Bebou', 1)
+D, [2021-03-24T11:21:32.561940 #78324] DEBUG -- :   TRANSACTION (0.5ms)  COMMIT
+D, [2021-03-24T11:21:32.564554 #78324] DEBUG -- :   Product Load (0.2ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2021-03-24T11:21:46.173485 #78360] DEBUG -- :   Client Load (0.1ms)  SELECT `clients`.* FROM `clients` ORDER BY `clients`.`id` ASC LIMIT 1
+D, [2021-03-24T11:21:46.194110 #78360] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2021-03-24T11:21:46.196370 #78360] DEBUG -- :   Comment Create (0.5ms)  INSERT INTO `comments` (`content`, `client_id`) VALUES ('Bebou', 1)
+D, [2021-03-24T11:21:46.200714 #78360] DEBUG -- :   TRANSACTION (1.7ms)  COMMIT
+D, [2021-03-24T11:21:46.204346 #78360] DEBUG -- :   Product Load (0.1ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2021-03-24T11:24:56.427468 #78697] DEBUG -- :   Client Load (0.1ms)  SELECT `clients`.* FROM `clients` ORDER BY `clients`.`id` ASC LIMIT 1
+D, [2021-03-24T11:24:56.455559 #78697] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:24:56.458425 #78697] DEBUG -- :   Comment Create (1.8ms)  INSERT INTO `comments` (`content`, `client_id`) VALUES ('Bebou', 1)
+D, [2021-03-24T11:24:56.460197 #78697] DEBUG -- :   TRANSACTION (0.6ms)  COMMIT
+D, [2021-03-24T11:24:56.462588 #78697] DEBUG -- :   Product Load (0.2ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2021-03-24T11:25:23.183479 #78759] DEBUG -- :   Client Load (0.1ms)  SELECT `clients`.* FROM `clients` ORDER BY `clients`.`id` ASC LIMIT 1
+D, [2021-03-24T11:25:23.207865 #78759] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:25:23.209050 #78759] DEBUG -- :   Comment Create (0.3ms)  INSERT INTO `comments` (`content`, `client_id`) VALUES ('Bebou', 1)
+D, [2021-03-24T11:25:23.210822 #78759] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
+D, [2021-03-24T11:25:23.213780 #78759] DEBUG -- :   Product Load (0.1ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2021-03-24T11:25:39.075458 #78798] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` ORDER BY `clients`.`id` ASC LIMIT 1
+D, [2021-03-24T11:25:39.092250 #78798] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:25:39.094401 #78798] DEBUG -- :   Comment Create (1.4ms)  INSERT INTO `comments` (`content`, `client_id`) VALUES ('Bebou', 1)
+D, [2021-03-24T11:25:39.096154 #78798] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
+D, [2021-03-24T11:25:39.098523 #78798] DEBUG -- :   Product Load (0.2ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2021-03-24T11:26:59.398401 #78963] DEBUG -- :   Client Load (0.1ms)  SELECT `clients`.* FROM `clients` ORDER BY `clients`.`id` ASC LIMIT 1
+D, [2021-03-24T11:26:59.421293 #78963] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:26:59.422569 #78963] DEBUG -- :   Comment Create (0.3ms)  INSERT INTO `comments` (`content`, `client_id`) VALUES ('Bebou', 1)
+D, [2021-03-24T11:26:59.424468 #78963] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
+D, [2021-03-24T11:26:59.426846 #78963] DEBUG -- :   Product Load (0.1ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2021-03-24T11:27:11.383800 #78996] DEBUG -- :   Client Load (0.1ms)  SELECT `clients`.* FROM `clients` ORDER BY `clients`.`id` ASC LIMIT 1
+D, [2021-03-24T11:27:11.410656 #78996] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:27:11.413696 #78996] DEBUG -- :   Comment Create (0.8ms)  INSERT INTO `comments` (`content`, `client_id`) VALUES ('Bebou', 1)
+D, [2021-03-24T11:27:11.415836 #78996] DEBUG -- :   TRANSACTION (0.5ms)  COMMIT
+D, [2021-03-24T11:27:11.418582 #78996] DEBUG -- :   Product Load (0.1ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2021-03-24T11:31:26.082328 #79418] DEBUG -- :   Client Load (0.5ms)  SELECT `clients`.* FROM `clients` ORDER BY `clients`.`id` ASC LIMIT 1
+D, [2021-03-24T11:31:35.968135 #79445] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` ORDER BY `clients`.`id` ASC LIMIT 1
+D, [2021-03-24T11:31:55.980680 #79502] DEBUG -- :   Client Load (0.2ms)  SELECT `clients`.* FROM `clients` ORDER BY `clients`.`id` ASC LIMIT 1
+D, [2021-03-24T11:31:55.992205 #79502] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:31:55.993326 #79502] DEBUG -- :   Comment Create (0.3ms)  INSERT INTO `comments` (`content`) VALUES ('Bebou')
+D, [2021-03-24T11:31:55.995134 #79502] DEBUG -- :   TRANSACTION (0.9ms)  COMMIT
+D, [2021-03-24T11:31:55.997660 #79502] DEBUG -- :   Product Load (0.2ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2021-03-24T11:33:27.860010 #79672] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:33:27.861568 #79672] DEBUG -- :   Client Create (0.4ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Gabriel', 'Rossier', '2021-03-24 10:33:27.856019', '2021-03-24 10:33:27.856019')
+D, [2021-03-24T11:33:27.864205 #79672] DEBUG -- :   TRANSACTION (0.9ms)  COMMIT
+D, [2021-03-24T11:33:27.876116 #79672] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
+D, [2021-03-24T11:33:27.879295 #79672] DEBUG -- :   Comment Create (0.9ms)  INSERT INTO `comments` (`content`, `client_id`) VALUES ('Bebou', 1)
+D, [2021-03-24T11:33:27.880974 #79672] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
+D, [2021-03-24T11:33:27.883623 #79672] DEBUG -- :   Product Load (0.1ms)  SELECT `products`.* FROM `products` ORDER BY `products`.`id` ASC LIMIT 1
+D, [2021-03-24T11:35:21.196492 #79892] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:35:21.199332 #79892] DEBUG -- :   Client Create (1.9ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Gabriel', 'Rossier', '2021-03-24 10:35:21.191731', '2021-03-24 10:35:21.191731')
+D, [2021-03-24T11:35:21.201653 #79892] DEBUG -- :   TRANSACTION (0.5ms)  COMMIT
+D, [2021-03-24T11:35:21.213927 #79892] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:35:21.215312 #79892] DEBUG -- :   Comment Create (0.3ms)  INSERT INTO `comments` (`content`, `client_id`) VALUES ('Bebou', 2)
+D, [2021-03-24T11:35:21.217058 #79892] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
+D, [2021-03-24T11:35:31.501748 #79922] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:35:31.503164 #79922] DEBUG -- :   Client Create (0.3ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Gabriel', 'Rossier', '2021-03-24 10:35:31.497574', '2021-03-24 10:35:31.497574')
+D, [2021-03-24T11:35:31.505996 #79922] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
+D, [2021-03-24T11:35:31.518009 #79922] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:35:31.521261 #79922] DEBUG -- :   Comment Create (2.3ms)  INSERT INTO `comments` (`content`, `client_id`) VALUES ('Bebou', 3)
+D, [2021-03-24T11:35:31.522688 #79922] DEBUG -- :   TRANSACTION (0.4ms)  COMMIT
+D, [2021-03-24T11:35:31.529340 #79922] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:35:31.534994 #79922] DEBUG -- :   Category Create (0.3ms)  INSERT INTO `categories` (`name`, `description`, `created_at`, `updated_at`) VALUES ('tv', 'ok', '2021-03-24 10:35:31.528673', '2021-03-24 10:35:31.528673')
+D, [2021-03-24T11:35:31.536784 #79922] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
+D, [2021-03-24T11:35:31.545777 #79922] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:35:31.546994 #79922] DEBUG -- :   Product Create (0.3ms)  INSERT INTO `products` (`name`, `price`, `category_id`, `created_at`, `updated_at`) VALUES ('blabla', 10, 1, '2021-03-24 10:35:31.545073', '2021-03-24 10:35:31.545073')
+D, [2021-03-24T11:35:31.548635 #79922] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
+D, [2021-03-24T11:35:31.558950 #79922] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:35:31.560270 #79922] DEBUG -- :   Comment Update (0.5ms)  UPDATE `comments` SET `comments`.`target_type` = 'Product', `comments`.`target_id` = 1 WHERE `comments`.`id` = 4
+D, [2021-03-24T11:35:31.562218 #79922] DEBUG -- :   TRANSACTION (0.9ms)  COMMIT
+D, [2021-03-24T11:37:24.094297 #80120] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:37:24.099795 #80120] DEBUG -- :   Client Create (0.9ms)  INSERT INTO `clients` (`firstname`, `lastname`, `created_at`, `updated_at`) VALUES ('Gabriel', 'Rossier', '2021-03-24 10:37:24.090173', '2021-03-24 10:37:24.090173')
+D, [2021-03-24T11:37:24.102245 #80120] DEBUG -- :   TRANSACTION (0.6ms)  COMMIT
+D, [2021-03-24T11:37:24.121118 #80120] DEBUG -- :   TRANSACTION (0.3ms)  BEGIN
+D, [2021-03-24T11:37:24.125083 #80120] DEBUG -- :   Comment Create (2.0ms)  INSERT INTO `comments` (`content`, `client_id`) VALUES ('Bebou', 4)
+D, [2021-03-24T11:37:24.126585 #80120] DEBUG -- :   TRANSACTION (0.5ms)  COMMIT
+D, [2021-03-24T11:37:24.133587 #80120] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
+D, [2021-03-24T11:37:24.135810 #80120] DEBUG -- :   Category Create (1.4ms)  INSERT INTO `categories` (`name`, `description`, `created_at`, `updated_at`) VALUES ('tv', 'ok', '2021-03-24 10:37:24.132964', '2021-03-24 10:37:24.132964')
+D, [2021-03-24T11:37:24.137245 #80120] DEBUG -- :   TRANSACTION (0.4ms)  COMMIT
+D, [2021-03-24T11:37:24.147064 #80120] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
+D, [2021-03-24T11:37:24.150176 #80120] DEBUG -- :   Product Create (2.0ms)  INSERT INTO `products` (`name`, `price`, `category_id`, `created_at`, `updated_at`) VALUES ('blabla', 10, 2, '2021-03-24 10:37:24.145553', '2021-03-24 10:37:24.145553')
+D, [2021-03-24T11:37:24.153160 #80120] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
+D, [2021-03-24T11:37:24.158558 #80120] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:37:24.160076 #80120] DEBUG -- :   Provider Create (0.3ms)  INSERT INTO `providers` (`name`) VALUES ('coucou')
+D, [2021-03-24T11:37:24.162077 #80120] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
+D, [2021-03-24T11:37:24.171089 #80120] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
+D, [2021-03-24T11:37:24.172299 #80120] DEBUG -- :   Comment Update (0.3ms)  UPDATE `comments` SET `comments`.`target_type` = 'Product', `comments`.`target_id` = 2 WHERE `comments`.`id` = 5
+D, [2021-03-24T11:37:24.174136 #80120] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
+D, [2021-03-24T11:37:24.176058 #80120] DEBUG -- :   Provider Load (0.3ms)  SELECT `providers`.* FROM `providers` ORDER BY `providers`.`id` ASC LIMIT 1
+D, [2021-03-24T11:37:24.178343 #80120] DEBUG -- :   TRANSACTION (0.2ms)  BEGIN
+D, [2021-03-24T11:37:24.179440 #80120] DEBUG -- :   Comment Create (0.3ms)  INSERT INTO `comments` (`content`, `client_id`) VALUES ('GOOD', 4)
+D, [2021-03-24T11:37:24.180948 #80120] DEBUG -- :   TRANSACTION (0.7ms)  COMMIT
+D, [2021-03-24T11:37:24.183148 #80120] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
+D, [2021-03-24T11:37:24.184356 #80120] DEBUG -- :   Comment Update (0.3ms)  UPDATE `comments` SET `comments`.`target_type` = 'Provider', `comments`.`target_id` = 1 WHERE `comments`.`id` = 6
+D, [2021-03-24T11:37:24.185993 #80120] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT
+D, [2021-03-24T11:37:24.187878 #80120] DEBUG -- :   TRANSACTION (0.1ms)  BEGIN
+D, [2021-03-24T11:37:24.188925 #80120] DEBUG -- :   Product Update (0.4ms)  UPDATE `products` SET `products`.`updated_at` = '2021-03-24 10:37:24.187251', `products`.`provider_id` = 1 WHERE `products`.`id` = 2
+D, [2021-03-24T11:37:24.190916 #80120] DEBUG -- :   TRANSACTION (0.8ms)  COMMIT

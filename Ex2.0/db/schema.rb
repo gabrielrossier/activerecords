@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_17_153559) do
+ActiveRecord::Schema.define(version: 2021_03_24_100551) do
 
   create_table "categories", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,17 @@ ActiveRecord::Schema.define(version: 2021_02_17_153559) do
     t.string "lastname"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "type"
+    t.string "name"
+  end
+
+  create_table "comments", charset: "utf8mb4", force: :cascade do |t|
+    t.string "content"
+    t.bigint "client_id"
+    t.string "target_type"
+    t.bigint "target_id"
+    t.index ["client_id"], name: "index_comments_on_client_id"
+    t.index ["target_type", "target_id"], name: "index_comments_on_target"
   end
 
   create_table "order_items", charset: "utf8mb4", force: :cascade do |t|
@@ -53,11 +64,21 @@ ActiveRecord::Schema.define(version: 2021_02_17_153559) do
     t.bigint "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "provider_id"
     t.index ["category_id"], name: "index_products_on_category_id"
+    t.index ["provider_id"], name: "index_products_on_provider_id"
   end
 
+  create_table "providers", charset: "utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.bigint "clients_id"
+    t.index ["clients_id"], name: "index_providers_on_clients_id"
+  end
+
+  add_foreign_key "comments", "clients"
   add_foreign_key "order_items", "orders"
   add_foreign_key "order_items", "products"
   add_foreign_key "orders", "clients"
   add_foreign_key "products", "categories"
+  add_foreign_key "providers", "clients", column: "clients_id"
 end
